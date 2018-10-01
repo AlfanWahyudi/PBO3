@@ -48,6 +48,8 @@ public class PBO310117118Latihan23BesarKecil {
                 min = nilai[no];
             } else if(nilai[no] > max) {
                 max = nilai[no];
+            }if(nilai[no] > max) {
+                max = nilai[no];
             }
             System.out.println("Nilai Mahasiswa ke- " + no + " : " + nilai[no]
                     + "\n");

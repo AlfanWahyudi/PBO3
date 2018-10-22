@@ -15,27 +15,28 @@ package pbo3.pkg10117118.latihan49.biayaemaskawin;
  * harus di keluarkan hendi
  */
 public class emas {
-    private double totalBerat;
-    private int harga;
+    public int hargaGram;
+   public double beratEmas;
 
-    public double getTotalBerat() {
-        return totalBerat;
+    public int getHargaGram() {
+        return hargaGram;
     }
 
-    public void setTotalBerat(double totalBerat) {
-        this.totalBerat = totalBerat;
+    public void setHargaGram(int hargaGram) {
+        this.hargaGram = hargaGram;
     }
 
-    public int getHarga() {
-        return harga;
+    public double getBeratEmas() {
+        return beratEmas;
     }
 
-    public void setHarga(int harga) {
-        this.harga = harga;
+    public void setBeratEmas(double beratEmas) {
+        this.beratEmas = beratEmas;
     }
-    
-    public double perhitungan(){
-        return harga*totalBerat;
+   
+   public double perhitungan(int hargaGram, double beratEmas) {
+       
+       return hargaGram * beratEmas ;
     }
     
 }

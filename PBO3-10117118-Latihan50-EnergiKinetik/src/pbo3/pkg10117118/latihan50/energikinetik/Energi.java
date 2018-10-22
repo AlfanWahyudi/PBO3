@@ -15,33 +15,61 @@ package pbo3.pkg10117118.latihan50.energikinetik;
  */
 public class Energi {
 
-    private int kecepatan;
     private double massa;
+  private double kecepatan;
+  private double kecepatanAwal;
+  private double kecepatanAkhir;
+  
 
     public double getMassa() {
         return massa;
     }
 
+    public double getKecepatan() {
+        return kecepatan;
+    }
+
+    public void setKecepatan(double kecepatan) {
+        this.kecepatan = kecepatan;
+    }
+    
     public void setMassa(double massa) {
         this.massa = massa;
     }
 
-    public int getKecepatan() {
-        return kecepatan;
+    public double getKecepatanAwal() {
+        return kecepatanAwal;
     }
 
-    public void setKecepatan(int kecepatan) {
-        this.kecepatan = kecepatan;
+    public void setKecepatanAwal(double kecepatanAwal) {
+        this.kecepatanAwal = kecepatanAwal;
     }
 
-    public double hitungEnergiKinetik() {
-        return 0.5 * massa * (kecepatan * kecepatan);
-
+    public double getKecepatanAkhir() {
+        return kecepatanAkhir;
     }
 
-    /* karena dimulai dalam keadaan diem maka kecepatan nya menjadi nol*/
-    public double hitungUsaha() {
-        return 0.5 * massa * (kecepatan * kecepatan) - 0.5 * massa * (0 * 0);
+    public void setKecepatanAkhir(double kecepatanAkhir) {
+        this.kecepatanAkhir = kecepatanAkhir;
+    }
 
+    
+  
+   
+    public double hitungEnergiKinetik(double massa, double kecepatan) {
+      
+        return 0.5 * massa * kecepatan * kecepatan ;
+        
+    }
+    
+     public double hitungUsaha(double kecepatanAwal, double kecepatanAkhir) {
+     
+    double ekAwal,ekAkhir,hasil;
+    
+    ekAwal = 0.5 * massa * kecepatanAwal * kecepatanAwal  ;
+    ekAkhir = 0.5 * massa * kecepatanAkhir * kecepatanAkhir  ;
+    hasil = ekAkhir - ekAwal;
+        
+    return hasil ;
     }
 }

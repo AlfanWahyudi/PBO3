@@ -5,6 +5,8 @@
  */
 package pbo3.pkg10117118.latihan50.energikinetik;
 
+import java.text.DecimalFormat;
+
 /**
  *
  * @author xider
@@ -21,25 +23,31 @@ public class PBO310117118Latihan50EnergiKinetik {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Energi objEnergi = new Energi();
-
-        objEnergi.setMassa(0.145);
-        objEnergi.setKecepatan(25);
-        System.out.println("Sebuah bola baseball dengan massa 145 gram dilempar"
-                + " dengan kecepatan 25 m/s");
+      DecimalFormat df = new DecimalFormat("#.#");
+       DecimalFormat df1 = new DecimalFormat("");
+        
+        Energi kinetik = new Energi();
+        kinetik.setMassa(0.145);
+        kinetik.setKecepatan(25);
+        kinetik.setKecepatanAwal(0);
+        System.out.println("Sebuah bola baseball dengan massa "+
+                df1.format(kinetik.getMassa())+" gram dilempar" 
+                + " dengan kecepatan "+df.format(kinetik.getKecepatan())+" m/s");
         System.out.println("a. Berapakah Energi Kinetiknya ?");
         System.out.println("b. Berapakah usaha yang dilakukan pada bola untuk "
                 + "mencapai kecepatan ini jika dimulai dari keadaan diam ?");
         System.out.println("");
-        System.out.println("=====JAWABAN=====");
-        System.out.println("a. Energi Kinetiknya Adalah "
-                + objEnergi.hitungEnergiKinetik() + " Joule");
-        System.out.println("b. Usahanya adalah " + objEnergi.hitungUsaha()
-                + " Joule");
-        System.out.println("");
-        System.out.println("Jadi energi kinetik dan usahanya bernilai sama yaitu "
-                + "sebesar 45.3125 Joule");
+        
+        
+        
+        System.out.println("=====PROGRAM MENCARI ENERGI KINETIK=====");
+        System.out.println("Energi Kinetik : " + df.format(
+                           kinetik.hitungEnergiKinetik
+                          (kinetik.getMassa(), kinetik.getKecepatan())));
+        System.out.println("Usaha : " + df.format (kinetik.hitungUsaha
+                          (kinetik.getKecepatanAwal(), 
+                           kinetik.getKecepatanAkhir())));
 
     }
-
+    
 }

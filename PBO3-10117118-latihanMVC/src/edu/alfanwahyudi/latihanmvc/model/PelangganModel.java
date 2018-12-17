@@ -78,6 +78,7 @@ public class PelangganModel {
     
     public void simpanForm(){
              JOptionPane.showMessageDialog(null, "Berhasil Disimpan");
+             resetForm();
           
     }
 }
